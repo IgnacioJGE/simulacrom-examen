@@ -1,5 +1,4 @@
 import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
 import { Handlers } from "$fresh/server.ts";
 export const handler: Handlers = {
   GET(req, ctx) {
