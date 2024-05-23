@@ -1,6 +1,7 @@
 import { type PageProps } from "$fresh/server.ts";
 import { FunctionalComponent } from "https://esm.sh/v128/preact@10.19.6/src/index.js";
 import Booty from "../islands/Button.tsx"
+import ButtonLogout from "../islands/Buttonlogout.tsx"
 
 export type props={
 name:string,
@@ -30,7 +31,7 @@ const Videos:FunctionalComponent<props>=(cooki:props,videitos:videoprops[])=>{
                         <div class="header-content">
                             <span class="user-name">{cooki.cooki.name}</span>
                        
-                            <a class="logout-button">Logout</a>
+                            <ButtonLogout/>
 
                         </div>
                     </header>
@@ -49,7 +50,7 @@ const Videos:FunctionalComponent<props>=(cooki:props,videitos:videoprops[])=>{
                                         <p class="video-release-date">Release date: {char.date}</p>
                                     </div>
                                 </a>
-                                {char.fav? <Booty userid={cooki.cooki.id} videoid={char.id} fav={char.fav}></Booty>:<Booty userid={cooki.cooki.id} videoid={char.id} fav={char.fav}></Booty>}
+                             <Booty userid={cooki.cooki.id} videoid={char.id} fav={char.fav}></Booty>
 
                                 </div>
                             ))}

@@ -65,27 +65,6 @@ setCookie(headers, {
 
       }
     },
-    GET: async (_req:Request,ctx:FreshContext)=>{
-      const cuqui=getCookies(_req.headers);
- 
-      try {
-        const respuesta= await axios.post("https://videoapp-api.deno.dev/checkuser",{
-          email:cuqui.email,
-          password:cuqui.password
-        })
-        const headers= new Headers();
-        console.log("papi ute si esta loguiao")
-        headers.set("location","/videos");
-        return new Response(null, {
-          status: 303, 
-          headers, 
-        });
-      } catch (error) {
-        console.log("uyyy no esta registrado papi")
-      }
-      debugger;
-      return ctx.render();
-    },
 
 
   };

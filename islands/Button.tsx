@@ -23,7 +23,7 @@ const cambiar = async (idv: string, idu: string,txt:boolean,settexto:StateUpdate
 };
 
 const Booty:FunctionalComponent<props>=(props: props)=> {
-
+console.log(props)
     const [valfav,setValfav]= useState(props.fav);
     const [texto,setText]=useState("");
     useEffect(() => {

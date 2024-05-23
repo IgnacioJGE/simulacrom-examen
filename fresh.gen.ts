@@ -4,28 +4,28 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
 import * as $register from "./routes/register.tsx";
+import * as $video_name_ from "./routes/video/[name].tsx";
 import * as $videos from "./routes/videos.tsx";
 import * as $Button from "./islands/Button.tsx";
+import * as $Buttonlogout from "./islands/Buttonlogout.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
     "./routes/register.tsx": $register,
+    "./routes/video/[name].tsx": $video_name_,
     "./routes/videos.tsx": $videos,
   },
   islands: {
     "./islands/Button.tsx": $Button,
+    "./islands/Buttonlogout.tsx": $Buttonlogout,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
